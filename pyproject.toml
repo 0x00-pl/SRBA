@@ -10,6 +10,11 @@ packages = [{include = "srba"}]
 python = "^3.10"
 
 
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://mirrors.163.com/pypi/simple/"
+priority = "supplemental"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
