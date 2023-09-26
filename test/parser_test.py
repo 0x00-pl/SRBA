@@ -1,6 +1,6 @@
 import os
 
-from SRBA.data_parser import parse_general_data
+from srba.data_parser import parse_general_data
 
 general_data_path = '../battle/battle_data/general_data/general_data_by_666bj_2.xlsx'
 current_dir = os.path.abspath(__file__)

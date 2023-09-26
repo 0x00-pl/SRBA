@@ -1,4 +1,4 @@
-from SRBA.light_cone import LightCone
+from srba.light_cone import LightCone
 
 于夜色中 = LightCone('于夜色中', 80)
 print(于夜色中.DEF)
