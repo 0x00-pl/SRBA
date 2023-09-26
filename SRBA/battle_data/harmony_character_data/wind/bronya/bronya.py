@@ -1,7 +1,7 @@
-from battle.character import Character
-from battle.combatEntity import ToughnessReduce, InteractMethod, DamageType
-from battle.damage_manager import attack
-from battle.state_adjust.buff.bronya.bronya_attack_boost import BronyaAttackBoost
+from SRBA.character import Character
+from SRBA.combatEntity import ToughnessReduce, InteractMethod, DamageType
+from SRBA.damage_manager import attack
+from SRBA.state_adjust.buff.bronya.bronya_attack_boost import BronyaAttackBoost
 
 
 class Bronya(Character):

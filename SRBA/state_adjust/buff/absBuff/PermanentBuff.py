@@ -1,4 +1,4 @@
-from battle.state_adjust.state_adjust import StateAdjust, STATES
+from SRBA.state_adjust.state_adjust import StateAdjust, STATES
 
 
 class PermanentBuff(StateAdjust):

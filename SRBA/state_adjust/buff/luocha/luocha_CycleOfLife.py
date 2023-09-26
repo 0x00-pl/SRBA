@@ -1,5 +1,5 @@
-from battle.battle_event.event_core.event import EntityEvent
-from battle.state_adjust.state_adjust import StateAdjust, STATES
+from SRBA.battle_event.event_core.event import EntityEvent
+from SRBA.state_adjust.state_adjust import StateAdjust, STATES
 
 
 class LuochaCycleOfLife(StateAdjust):

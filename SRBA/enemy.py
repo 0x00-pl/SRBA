@@ -1,5 +1,5 @@
-from battle.combatEntity import CombatEntity
-from battle.toughness import Toughness
+from SRBA.combatEntity import CombatEntity
+from SRBA.toughness import Toughness
 
 
 class Enemy(CombatEntity):

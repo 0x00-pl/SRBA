@@ -1,6 +1,6 @@
 from enum import Enum, auto
 
-from battle.data_manager import DataManager
+from SRBA.data_manager import DataManager
 
 
 class Relic:

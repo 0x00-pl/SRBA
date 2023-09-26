@@ -1,8 +1,8 @@
 import json
 from enum import Enum
 
-from battle.battle_event.event_core.event import EntityEvent, Event
-from battle.timer import Timer
+from SRBA.battle_event.event_core.event import EntityEvent, Event
+from SRBA.timer import Timer
 
 
 class CombatEntity:

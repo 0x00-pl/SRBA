@@ -1,5 +1,5 @@
-from battle.combatEntity import CombatEntity
-from battle.data_manager import DataManager
+from SRBA.combatEntity import CombatEntity
+from SRBA.data_manager import DataManager
 
 
 class Character(CombatEntity):

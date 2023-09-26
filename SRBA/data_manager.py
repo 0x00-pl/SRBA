@@ -1,6 +1,6 @@
 import os.path
 
-from battle.data_parser import parse_general_data, parse_relic_main_data, parse_relic_sub_data
+from SRBA.data_parser import parse_general_data, parse_relic_main_data, parse_relic_sub_data
 
 
 def singleton(cls):

@@ -2,8 +2,8 @@
 抽象类
 这类buff 是持续 N个回合的数值加成类buff.
 """
-from battle.battle_event.event_core.event import EntityEvent
-from battle.state_adjust.state_adjust import StateAdjust, STATES
+from SRBA.battle_event.event_core.event import EntityEvent
+from SRBA.state_adjust.state_adjust import StateAdjust, STATES
 
 
 class TimeRestrictStatesBuff(StateAdjust):

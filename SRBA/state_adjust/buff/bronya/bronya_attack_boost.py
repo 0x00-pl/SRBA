@@ -1,6 +1,6 @@
-from battle.battle_event.event_core.event import EntityEvent
-from battle.data_manager import DataManager
-from battle.state_adjust.state_adjust import StateAdjust, STATES
+from SRBA.battle_event.event_core.event import EntityEvent
+from SRBA.data_manager import DataManager
+from SRBA.state_adjust.state_adjust import StateAdjust, STATES
 
 
 class BronyaAttackBoost(StateAdjust):

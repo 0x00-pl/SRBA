@@ -1,4 +1,4 @@
-from battle.cycle import Cycle
+from SRBA.cycle import Cycle
 
 
 class GameManager:

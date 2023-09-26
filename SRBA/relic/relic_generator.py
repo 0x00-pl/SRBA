@@ -1,6 +1,6 @@
 import random
 
-from battle.relic.relic import Relic
+from SRBA.relic.relic import Relic
 
 
 def gen_relic(PART, ID, STAR=5, LEVEL=15, **kwargs):

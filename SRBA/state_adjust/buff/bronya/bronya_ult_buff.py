@@ -1,4 +1,4 @@
-from battle.state_adjust.buff.absBuff.TimeRestrictStatesBuff import TimeRestrictStatesBuff
+from SRBA.state_adjust.buff.absBuff.TimeRestrictStatesBuff import TimeRestrictStatesBuff
 
 
 class BronyaUltBuff(TimeRestrictStatesBuff):

@@ -1,4 +1,4 @@
-from battle.state_adjust.buff.absBuff.PermanentBuff import PermanentBuff
+from SRBA.state_adjust.buff.absBuff.PermanentBuff import PermanentBuff
 
 
 class outerTwoRelicBuff(PermanentBuff):

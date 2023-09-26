@@ -1,7 +1,7 @@
-from battle.character import Character
-from battle.combatEntity import DamageType, InteractMethod, ToughnessReduce
-from battle.damage_manager import attack, heal
-from battle.state_adjust.buff.luocha.luocha_AutoSkil_CoolDown import LuochaAutoSkillCoolDown
+from SRBA.character import Character
+from SRBA.combatEntity import DamageType, InteractMethod, ToughnessReduce
+from SRBA.damage_manager import attack, heal
+from SRBA.state_adjust.buff.luocha.luocha_AutoSkil_CoolDown import LuochaAutoSkillCoolDown
 
 
 class Luocha(Character):
