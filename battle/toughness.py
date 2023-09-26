@@ -15,4 +15,3 @@ class Toughness:
         if self.current_length == 0:
             return True
         return False
-

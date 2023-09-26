@@ -8,5 +8,4 @@ class PermanentBuff(StateAdjust):
         self.applyStatesBuff()
 
     def applyStatesBuff(self):
-
         pass

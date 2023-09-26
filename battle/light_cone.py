@@ -12,4 +12,3 @@ class LightCone:
         self.HP = light_cone_data[light_cone_name]['基础生命值'] * level_up_data[level]['光锥系数']
         self.ATK = light_cone_data[light_cone_name]['基础攻击力'] * level_up_data[level]['光锥系数']
         self.DEF = light_cone_data[light_cone_name]['基础防御力'] * level_up_data[level]['光锥系数']
-

@@ -1,4 +1,3 @@
-
 def get_relic_effects(RIDs):
     counter = {}
 

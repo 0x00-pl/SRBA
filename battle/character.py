@@ -24,7 +24,7 @@ class Character(CombatEntity):
         BASE_HP = character_data[character_name]['基础生命值'] * level_up_data[level]['角色系数']
         BASE_DEF = character_data[character_name]['基础防御力'] * level_up_data[level]['角色系数']
         BASE_SPEED = character_data[character_name]['基础速度']
-        BASE_HATE =  character_data[character_name]['基础仇恨']
+        BASE_HATE = character_data[character_name]['基础仇恨']
 
         BASE_ATK = BASE_ATK + light_cone.ATK
         BASE_HP = BASE_HP + light_cone.HP
@@ -38,7 +38,7 @@ class Character(CombatEntity):
                          Speed=BASE_SPEED,
                          HATE=BASE_HATE,
                          DEBUFF_RES=0,
-                         TYPE_DMG_RES=[0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+                         TYPE_DMG_RES=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
                          CRIT_RATE=BASE_CRIT_RATE,
                          CRIT_DMG=BASE_CRIT_DMG,
                          LEVEL=level)
@@ -46,23 +46,23 @@ class Character(CombatEntity):
         self.ENERGY_LIMIT = character_data[character_name]['能量上限']
         pass
 
-    def apply_trace(self,trace_set):
+    def apply_trace(self, trace_set):
         pass
 
-    def apply_relic(self,relics):
+    def apply_relic(self, relics):
         for relic in relics:
-            for att,value in relic.radioMod:
-                self.mod_property_radio(att,value)
-            for att,value in relic.deltaMod:
-                self.mod_property_delta(att,value)
-
+            for att, value in relic.radioMod:
+                self.mod_property_radio(att, value)
+            for att, value in relic.deltaMod:
+                self.mod_property_delta(att, value)
 
     def normal_attack(self, target):
         """
         :param target: combat_obj对象
         """
         pass
-    def skill_attack(self,target):
+
+    def skill_attack(self, target):
         """
         :param target: combat_obj对象
         """
@@ -73,7 +73,6 @@ class Character(CombatEntity):
         :param target: combat_obj对象
         """
         pass
-
 
     def follow_up_attack(self, target):
         """
@@ -96,20 +95,17 @@ class Character(CombatEntity):
     def on_cycle_end(self):
         pass
 
-    def on_hp_change(self,source):
+    def on_hp_change(self, source):
         pass
 
-    def on_mp_change(self,source):
+    def on_mp_change(self, source):
         pass
 
-    def on_buff_change(self,source):
+    def on_buff_change(self, source):
         pass
 
-    def on_skill_point_change(self,source):
+    def on_skill_point_change(self, source):
         pass
 
-    def under_attack(self,source):
+    def under_attack(self, source):
         pass
-
-
-

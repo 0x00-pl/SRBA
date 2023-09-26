@@ -6,6 +6,7 @@ class TargetSet:
     TargetSet用于为角色的普攻/战技/终结技提供目标
 
     """
+
     def __init__(self, type, **kwargs):
         self.type = type
 
@@ -30,7 +31,6 @@ class TargetSet:
 
 
 class TargetType(Enum):
-    SINGLE = 0 # 单攻
-    MULTI = 1 # 扩散
-    ALL = 2 # 群攻
-
+    SINGLE = 0  # 单攻
+    MULTI = 1  # 扩散
+    ALL = 2  # 群攻

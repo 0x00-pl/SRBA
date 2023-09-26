@@ -1,5 +1,5 @@
 {
-  "HP":0,
+  "HP": 0,
   "Attack": 0,
   "Defence": 0,
   "Speed": 0,
@@ -32,6 +32,6 @@
   "QuantumPen": 0,
   "ImaginaryPen": 0,
   "Weaken": 0,
-  "Vulnerability": 0 ,
+  "Vulnerability": 0,
   "DmgReduction": 0
 }

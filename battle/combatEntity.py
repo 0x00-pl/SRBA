@@ -26,7 +26,7 @@ class CombatEntity:
         :param StatusProbability 效果命中 double
         :param GameManager 游戏管理器
         """
-        with open("./battle_data/property.json",'r') as property_file:
+        with open("./battle_data/property.json", 'r') as property_file:
             defaultProperty = json.load(property_file)
         for attribute in defaultProperty:
             base_property = defaultProperty[attribute]

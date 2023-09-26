@@ -1,6 +1,7 @@
 from enum import Enum, auto
 from typing import List, Callable
 
+
 class Event:
     def __int__(self):
         self._listeners: List[Callable] = []
@@ -14,6 +15,7 @@ class Event:
     def trigger(self, *args, **kwargs):
         for listener in self._listeners:
             listener(*args, **kwargs)
+
 
 class EntityEvent(Enum):
     NORMAL_ATTACK = auto
@@ -35,10 +37,11 @@ class EntityEvent(Enum):
     UNDER_HEAL = auto
     CYCLE_START = auto
     CYCLE_END = auto
+
+
 class EnvEvent(Enum):
     GAME_START = 0
     ROUND_START = 1
     ROUND_END = 2
     GAME_END = 3
     SKILL_POINT_CHANGE = 4
-

@@ -1,4 +1,3 @@
-import re
 from enum import Enum, auto
 
 from battle.data_manager import DataManager
@@ -19,25 +18,24 @@ class Relic:
 
     """
 
-    def __init__(self,PART,STAR,LEVEL,MAIN_ATT,SUB_ATT,SUB_ATT_STEP,ID):
-        #TODO 完成遗器修正值的填写TAT
+    def __init__(self, PART, STAR, LEVEL, MAIN_ATT, SUB_ATT, SUB_ATT_STEP, ID):
+        # TODO 完成遗器修正值的填写TAT
 
         self.radioMod = {}
         self.deltaMod = {}
 
         dm = DataManager()
         relic_main_att = dm.relic_main_data
-        main_relic_id = PART+STAR
+        main_relic_id = PART + STAR
         relic_main = relic_main_att[main_relic_id]
-        BaseValue,LevelAdd = self.get_values_from_property(relic_main,MAIN_ATT)
+        BaseValue, LevelAdd = self.get_values_from_property(relic_main, MAIN_ATT)
 
-
-        Att_Name,isDelta = self.process_string(MAIN_ATT)
+        Att_Name, isDelta = self.process_string(MAIN_ATT)
 
         if isDelta:
-            self.deltaMod[Att_Name] = BaseValue+LevelAdd*(LEVEL-1)
+            self.deltaMod[Att_Name] = BaseValue + LevelAdd * (LEVEL - 1)
         else:
-            self.radioMod[Att_Name] = BaseValue+LevelAdd*(LEVEL-1)
+            self.radioMod[Att_Name] = BaseValue + LevelAdd * (LEVEL - 1)
 
         relic_sub_att = dm.relic_sub_data
         relic_sub = relic_sub_att[STAR]
@@ -48,13 +46,13 @@ class Relic:
             Att_Name, isDelta = self.process_string(key)
             if isDelta:
                 current = self.deltaMod[Att_Name]
-                self.deltaMod[Att_Name] = current + Bases*BaseValue + StepValue*Steps
+                self.deltaMod[Att_Name] = current + Bases * BaseValue + StepValue * Steps
             else:
                 current = self.radioMod[Att_Name]
-                self.radioMod[Att_Name] = current + Bases*BaseValue + StepValue*Steps
+                self.radioMod[Att_Name] = current + Bases * BaseValue + StepValue * Steps
         self.ID = ID
 
-    def get_values_from_property(self,data, target_property):
+    def get_values_from_property(self, data, target_property):
         # 遍历 JSON 数据
         for group_id, group_data in data.items():
             for affix_id, affix_data in group_data.items():
@@ -64,7 +62,8 @@ class Relic:
                     return base_value, level_add
         # 如果没有找到对应的 Property，返回 None
         raise RuntimeError('No such att for target relic: 对应的遗器没有指定的属性')
-    def get_values_from_sub_property(self,data, target_property):
+
+    def get_values_from_sub_property(self, data, target_property):
         # 遍历 JSON 数据
         for group_id, group_data in data.items():
             for affix_id, affix_data in group_data.items():
@@ -85,6 +84,7 @@ class Relic:
             s = s.replace('AddedRatio', '').replace('Base', '')
             return s, False
 
+
 class Parts(Enum):
     HEAD = "1"
     HANDS = "2"
@@ -92,6 +92,7 @@ class Parts(Enum):
     FEET = "4"
     SPHERE = "5"
     ROPE = "6"
+
 
 class RID(Enum):
     云无留迹的过客 = auto

@@ -16,6 +16,7 @@ class BronyaAttackBoost(StateAdjust):
 
         # TODO 获取布洛妮娅天赋拉条数值
         self.boost = radio
-    def on_trigger(self,**kwargs):
+
+    def on_trigger(self, **kwargs):
         self.sourceEntity.Timer.change_distance(self.boost)
         self.remove_self()
