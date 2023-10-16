@@ -8,12 +8,8 @@ packages = [{include = "srba"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+numpy = ">=1.25.2"
 
-
-[[tool.poetry.source]]
-name = "mirrors"
-url = "https://mirrors.163.com/pypi/simple/"
-priority = "supplemental"
 
 [build-system]
 requires = ["poetry-core"]

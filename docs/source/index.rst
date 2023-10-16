@@ -12,6 +12,8 @@ contain the root `toctree` directive.
 
    Introduction/intro
    ProjectOverview/GameModeling
+   Q_and_A/q_and_a
+   Todo/todo
 
 
 
