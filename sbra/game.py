@@ -1,6 +1,7 @@
 from typing import List
 
-from sbra.entity import Entity
+from sbra.brain.enemy_brain import EnemyBrain
+from sbra.entity import Entity, Team
 from sbra.state_base import StateBase
 from sbra.game_state import GameState
 
@@ -9,6 +10,7 @@ class Game(StateBase):
     def __init__(self):
         self.tick = 0
         self.entity_list: List[Entity] = []
+        self.enemy_brain = EnemyBrain()
 
     def save_state(self) -> GameState:
         state = GameState(
@@ -20,7 +22,10 @@ class Game(StateBase):
         pass
 
     def get_brain(self, entity: Entity):
-        return None
+        if entity.team == Team.enemy:
+            return self.enemy_brain
+        else:
+            return None
 
     def tick(self):
         for entity in self.entity_list:
